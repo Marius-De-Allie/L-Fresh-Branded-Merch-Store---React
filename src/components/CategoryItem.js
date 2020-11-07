@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Category = ({ image_url, description }) => (
+const CategoryItem = ({ image_url, description }) => (
   <div className="category-card">
     <div className="cat-img">
       <img 
@@ -11,4 +11,4 @@ const Category = ({ image_url, description }) => (
   </div>
 );
 
-export default Category;
+export default CategoryItem;
