@@ -3,12 +3,22 @@ import CategoryItem from './CategoryItem';
 import categoryData from '../utils/_data';
 
 const CategoryList = () => {
-  const categories = Object.keys(categoryData);
+  // Convert categories object to an array.
+  const categories = Object.keys(categoryData).map(el => categoryData[el]);
 
-  console.log(categoryData);
+  console.log(categories);
 
   return (
     <div className="cat-list">
+      <ul>
+        {categories.map(cat => 
+          <CategoryItem 
+            key={cat.name}
+            {...cat} 
+          />
+          )
+        }
+      </ul>
       
     </div>
   )

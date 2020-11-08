@@ -1,14 +1,14 @@
 import React from 'react';
 
-const CategoryItem = ({ image_url, description }) => (
-  <div className="category-card">
+const CategoryItem = ({ imgUrl, name }) => console.log(imgUrl)||(
+  <li className="category-card">
     <div className="cat-img">
       <img 
-        src={image_url}
-        alt={description}  
+        src={imgUrl}
+        alt={name}
       />
     </div>
-  </div>
+  </li>
 );
 
 export default CategoryItem;
