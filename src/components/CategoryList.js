@@ -10,7 +10,7 @@ const CategoryList = () => {
 
   return (
     <div className="cat-list">
-      <ul>
+      <ul style={{display: "flex", justifyContent: "center"}}>
         {categories.map(cat => 
           <CategoryItem 
             key={cat.name}
