@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa'
 
 const Nav = () => (
   <nav className="nav-bar" 
@@ -10,13 +11,23 @@ const Nav = () => (
       // left: '0px',
       display: 'flex',
       justifyContent: 'center',
+      alignItems: 'center',
       backgroundColor: 'grey',
       
     }}
   >
-    <NavLink className="nav-links" to="/">Home</NavLink>
-    <NavLink className="nav-links" to="/">Shop</NavLink>
-    <NavLink className="nav-links" to="/signin">Sign In</NavLink>
+    <div>
+      <NavLink className="nav-links" to="/">Home</NavLink>
+    </div>
+    <div>
+      <NavLink className="nav-links" to="/">Shop</NavLink>
+    </div>
+    <div>
+      <NavLink className="nav-links" to="/signin">Sign In</NavLink>
+    </div>
+    <div style={{cursor: 'pointer', justifySelf: 'flex-end'}} >
+      <FaShoppingCart color="white" />
+    </div>
   </nav>
 );
 
