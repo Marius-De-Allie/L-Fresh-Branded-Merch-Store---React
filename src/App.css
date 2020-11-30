@@ -44,7 +44,7 @@
  
 .nav-links {
   text-decoration: none;
-  color: white;
+  color: gold;
   font-weight: bold;;
 
  
@@ -52,7 +52,7 @@
 }
 
 .nav-links:hover {
-  color: gold;
+  color: yellow;
 }
 
 .cat-img p {
@@ -61,4 +61,8 @@
 
 .cat-img:hover p {
   visibility: unset;
+}
+
+.logo {
+  justify-self: center;
 }
