@@ -12,7 +12,8 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/shop" component={ShopPage} />
+        <Route exact path="/shop" component={ShopPage} />
+        <Route path="/shop/:catId" render={() => <p>Cat page</p>} />
         <Route path="/signin" component={SignInPage} />
       </Switch>
     </div>

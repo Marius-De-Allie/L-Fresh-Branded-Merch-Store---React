@@ -7,6 +7,7 @@ const Nav = () => (
     // style={{border: '1px solid grey',
     //     backgroundColor: 'grey'
     //   }}
+  
   >
     <h1 className="logo">LOGO</h1>
     
@@ -36,8 +37,11 @@ const Nav = () => (
         <NavLink className="nav-links" to="/signin"><FaUserCircle color="black" /> Sign In </NavLink>
       </div>
       <div>
-        <FaShoppingCart color="black" />
-        View Cart
+        
+        <NavLink className="nav-links" to="/">
+          <FaShoppingCart color="black" /> 
+          {' View cart'}
+        </NavLink>
       </div>
     </nav>
   </div>
