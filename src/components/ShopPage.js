@@ -1,7 +1,6 @@
-import React from 'React';
+import React from 'react';
 import CategoryItem from './CategoryItem';
 import categoryData from '../utils/_data';
-
 
 const ShopPage = () => {
 
