@@ -9,8 +9,8 @@ const CategoryList = () => {
   console.log(categories);
 
   return (
-    <div className="cat-list">
-      <ul style={{display: "flex", justifyContent: "center"}}>
+    <div className="cat-list" style={{display: 'flex', justifyContent: 'center'}}>
+      <ul style={{width: '100%', padding: '0', display: 'flex', justifyContent: 'space-around'}}>
         {categories.map(cat => 
           <CategoryItem 
             key={cat.name}

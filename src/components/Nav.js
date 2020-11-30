@@ -20,8 +20,8 @@ const Nav = () => (
         justifyContent: 'space-evenly',
         alignItems: 'center',
         maxWidth: '900px',
-        margin: '0 auto',
-        border: '1px solid grey',
+        margin: '0 auto'
+        // border: '1px solid grey',
         // backgroundColor: 'grey'
         
       }}
@@ -33,10 +33,10 @@ const Nav = () => (
         <NavLink className="nav-links" to="/">Shop</NavLink>
       </div>
       <div>
-        <NavLink className="nav-links" to="/signin"><FaUserCircle color="gold" /> Sign In </NavLink>
+        <NavLink className="nav-links" to="/signin"><FaUserCircle color="black" /> Sign In </NavLink>
       </div>
       <div>
-        <FaShoppingCart color="gold" />
+        <FaShoppingCart color="black" />
         View Cart
       </div>
     </nav>

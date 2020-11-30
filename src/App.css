@@ -44,7 +44,7 @@
  
 .nav-links {
   text-decoration: none;
-  color: gold;
+  color: #000;
   font-weight: bold;;
 
  
@@ -52,15 +52,27 @@
 }
 
 .nav-links:hover {
-  color: yellow;
+  color: turquoise;
 }
 
 .cat-img p {
-  visibility: hidden;
+  /* visibility: hidden; */
+  opacity: 0;
+  background: rgba(29, 106, 154. 0.72);
+  color: black;
+  font-weight: bold;
+  height: 15px;
+  padding: 5px;
+  /* margin: 0 50px; */
+  /* background-color: #fff; */
+  transition: opacity 1s, visibility 1s;
+  
 }
 
 .cat-img:hover p {
   visibility: unset;
+  opacity: 0.7;
+  
 }
 
 .logo {
