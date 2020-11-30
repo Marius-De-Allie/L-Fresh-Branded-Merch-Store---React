@@ -54,3 +54,11 @@
 .nav-links:hover {
   color: gold;
 }
+
+.cat-img p {
+  visibility: hidden;
+}
+
+.cat-img:hover p {
+  visibility: unset;
+}
