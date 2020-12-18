@@ -50,6 +50,11 @@ export default (function () {
           ItemName: 'eight',
           price: 40,
           size: ['small', 'medium', 'large', 'XL', 'XXL']
+        },
+        {
+          ItemName: 'thirteen',
+          price: 50,
+          size: ['small', 'medium', 'large', 'XL', 'XXL']
         }
       ]
     },

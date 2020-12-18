@@ -7,11 +7,10 @@ const ItemList = ({ match }) => {
   let items = Object.keys(categoryData).map(el => categoryData[el]);
   items = items.filter(item => item.name === match.params.catId)[0].items;
   console.log('CATITEMS', items);
-  // categories.filter(el => )
 
   return (
     <div>
-      Item List
+      {items.map(item => <Item key={item.ItemName} item={item} />)}
     </div>
   );
 };
