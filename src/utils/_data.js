@@ -8,22 +8,26 @@ export default (function () {
         {
           ItemName: 'one',
           price: 25,
-          size: ['small', 'medium', 'large', 'XL', 'XXL']
+          size: ['small', 'medium', 'large', 'XL', 'XXL'],
+          imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
           ItemName: 'two',
           price: 35,
-          size: ['small', 'medium', 'large', 'XL', 'XXL']
+          size: ['small', 'medium', 'large', 'XL', 'XXL'],
+          imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
           ItemName: 'three',
           price: 30,
-          size: ['small', 'medium', 'large', 'XL', 'XXL']
+          size: ['small', 'medium', 'large', 'XL', 'XXL'],
+          imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
           ItemName: 'four',
           price: 40,
-          size: ['small', 'medium', 'large', 'XL', 'XXL']
+          size: ['small', 'medium', 'large', 'XL', 'XXL'],
+          imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         }
       ]
     },

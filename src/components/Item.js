@@ -12,7 +12,7 @@ const Item = ( { item }) => {
         </div>
         <p>{`price: $${item.price}`}</p>
       </div>
-      <button>Add to Cart</button>
+      <button className="cart-btn">Add to Cart</button>
     </div>
   );
 };

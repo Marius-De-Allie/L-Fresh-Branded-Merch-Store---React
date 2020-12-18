@@ -78,3 +78,18 @@
 .logo {
   justify-self: center;
 }
+
+.cart-btn {
+  border: 1px solid salmon;
+  background-color: salmon;
+  padding: 15px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.cart-btn:hover {
+  background-color: #fff;
+  color: salmon;
+}
