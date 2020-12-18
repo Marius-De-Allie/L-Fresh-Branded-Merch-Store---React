@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lin, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const CategoryItem = ({ imgUrl, name }) => {
   const history = useHistory();
