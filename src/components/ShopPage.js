@@ -2,6 +2,7 @@ import React from 'react';
 import CategoryItem from './CategoryItem';
 import categoryData from '../utils/_data';
 
+// TODOD - REFACTOR render CategoryList passing in categories as prop.
 const ShopPage = () => {
 
   // Convert categories object to an array.
