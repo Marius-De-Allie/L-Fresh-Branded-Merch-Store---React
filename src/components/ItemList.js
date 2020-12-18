@@ -9,7 +9,7 @@ const ItemList = ({ match }) => {
   console.log('CATITEMS', items);
 
   return (
-    <div>
+    <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly'}}>
       {items.map(item => <Item key={item.ItemName} item={item} />)}
     </div>
   );
