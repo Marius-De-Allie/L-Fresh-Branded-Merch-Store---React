@@ -93,3 +93,8 @@
   background-color: #fff;
   color: salmon;
 }
+
+.cart-btn:focus {
+  outline: none;
+  box-shadow: none;
+}

@@ -10,9 +10,14 @@ const Item = ( { item }) => {
         <div className="size-container" style={{display: 'flex'}}>
           {item.size.map(size => <p>{size}</p>)}
         </div>
-        <p>{`price: $${item.price}`}</p>
+        <p>{`price: `}<span style={{fontWeight: 'bold'}}>${item.price}</span></p>
       </div>
-      <button className="cart-btn">Add to Cart</button>
+      <button 
+        className="cart-btn"
+        onClick={() => console.log('clicked!')}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 };
