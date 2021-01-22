@@ -6,25 +6,25 @@ export default (function () {
       imgUrl: 'https://images.pexels.com/photos/2080734/pexels-photo-2080734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       items: [
         {
-          ItemName: 'one',
+          name: 'one',
           price: 25,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
-          ItemName: 'two',
+          name: 'two',
           price: 35,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
-          ItemName: 'three',
+          name: 'three',
           price: 30,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
-          ItemName: 'four',
+          name: 'four',
           price: 40,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
@@ -36,31 +36,31 @@ export default (function () {
       imgUrl: 'https://images.pexels.com/photos/3140049/pexels-photo-3140049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       items: [
         {
-          ItemName: 'five',
+          name: 'five',
           price: 25,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
-          ItemName: 'six',
+          name: 'six',
           price: 35,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
-          ItemName: 'seven',
+          name: 'seven',
           price: 30,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
-          ItemName: 'eight',
+          name: 'eight',
           price: 40,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
         },
         {
-          ItemName: 'thirteen',
+          name: 'thirteen',
           price: 50,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
@@ -72,25 +72,25 @@ export default (function () {
       imgUrl: 'https://images.pexels.com/photos/4142539/pexels-photo-4142539.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       items: [
         {
-          ItemName: 'nine',
+          name: 'nine',
           price: 25,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
         },
         {
-          ItemName: 'ten',
+          name: 'ten',
           price: 35,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
         },
         {
-          ItemName: 'eleven',
+          name: 'eleven',
           price: 30,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
         },
         {
-          ItemName: 'twelve',
+          name: 'twelve',
           price: 40,
           size: ['small', 'medium', 'large', 'XL', 'XXL'],
           imgUrl: 'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
@@ -100,6 +100,103 @@ export default (function () {
   };
 })();
 
+
+
+export const products = [
+  {
+    name: 'one',
+    price: 25,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    catid: 'hoodies'
+  },
+  {
+    name: 'two',
+    price: 35,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    catid: 'hoodies'
+  },
+  {
+    name: 'three',
+    price: 30,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    catid: 'hoodies'
+  },
+  {
+    name: 'four',
+    price: 40,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    catid: 'hoodies'
+  },
+  {
+    name: 'five',
+    price: 25,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    catId: 'shirts'
+  },
+  {
+    name: 'six',
+    price: 35,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    catId: 'shirts'
+  },
+  {
+    name: 'seven',
+    price: 30,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    catId: 'shirts'
+  },
+  {
+    name: 'eight',
+    price: 40,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    catId: 'shirts'
+  },
+  {
+    name: 'thirteen',
+    price: 50,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/2956142/pexels-photo-2956142.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+    catId: 'shirts'
+  },
+  {
+    name: 'nine',
+    price: 25,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    catId: 'headWear'
+  },
+  {
+    name: 'ten',
+    price: 35,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    catId: 'headWear'
+  },
+  {
+    name: 'eleven',
+    price: 30,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    catId: 'headWear'
+  },
+  {
+    name: 'twelve',
+    price: 40,
+    size: ['small', 'medium', 'large', 'XL', 'XXL'],
+    imgUrl: 'https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    catId: 'headWear'
+  }
+  
+
+];
 
 
 

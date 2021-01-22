@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import HomePage from './HomePage';
 import SignInPage from './SignInPage';
@@ -5,6 +6,7 @@ import ItemList from './ItemList';
 import Nav from './Nav';
 // Styling
 import '../App.css';
+import { loadData } from '../utils/firebase/loadInitData';
 
 function App() {
   return (
