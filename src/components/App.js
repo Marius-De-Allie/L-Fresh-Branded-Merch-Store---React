@@ -13,7 +13,6 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/shop" component={ShopPage} />
         <Route path="/shop/:catId" component={ItemList} />
         <Route path="/signin" component={SignInPage} />
       </Switch>
