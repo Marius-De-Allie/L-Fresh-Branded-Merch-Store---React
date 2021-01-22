@@ -1,7 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import HomePage from './HomePage';
 import SignInPage from './SignInPage';
-import ShopPage from './ShopPage';
 import ItemList from './ItemList';
 import Nav from './Nav';
 // Styling
