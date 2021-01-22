@@ -6,7 +6,6 @@ import ItemList from './ItemList';
 import Nav from './Nav';
 // Styling
 import '../App.css';
-import { loadData } from '../utils/firebase/loadInitData';
 
 function App() {
   return (
