@@ -11,7 +11,7 @@ const Item = ( { item }) => {
         <div className="size-container" style={{display: 'flex'}}>
           {item.size.map(size => <ItemSize key={size} size={size} />)}
         </div>
-        <p>{`price: `}<span style={{fontWeight: 'bold'}}>${item.price}</span></p>
+        <p><span>${item.price}</span></p>
       </div>
       <button 
         className="cart-btn"

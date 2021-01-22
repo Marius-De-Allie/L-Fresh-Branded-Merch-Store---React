@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Acme', sans-serif;
 }
 
 .App-logo {
@@ -55,24 +56,32 @@
   color: salmon;
 }
 
-.cat-img p {
-  /* visibility: hidden; */
-  opacity: 0;
-  background: rgba(29, 106, 154. 0.72);
-  color: black;
-  font-weight: bold;
-  height: 15px;
-  padding: 5px;
-  /* margin: 0 50px; */
-  /* background-color: #fff; */
-  transition: opacity 1s, visibility 1s;
-  
+.cat-list {
+  margin-top: 2rem;
 }
 
-.cat-img:hover p {
-  visibility: unset;
-  opacity: 0.7;
-  
+.cat-img {
+  transition: filter 2s;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  /* border: 1px solid black; */
+  height: 333px;
+  background-color: white;
+}
+
+.cat-img:hover {
+  filter: grayscale(100%);
+  /* opacity: 0.8; */
+  /* background-color: red; */
+  /* border: 1px solid red; */
+
+}
+
+.cat-text {
+  font-size: 18px;
+  color: salmon;
+  padding: 10px;
 }
 
 .logo {

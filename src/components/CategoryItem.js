@@ -15,21 +15,30 @@ const CategoryItem = ({ imgUrl, name }) => {
   return (
     <li 
       className="category-card"
-      style={{listStyle: "none", display: "block", width: '100%', margin: '0 .25rem'}}
+      style={{listStyle: "none", display: "block", width: '100%', margin: '0 .25rem', padding: '0 1rem'}}
     >
       <div 
-        className="cat-img" 
-        style={{width: "100%", height: '300px', cursor: 'pointer', position: 'relative'}}
+        style={{
+          width: "100%", 
+          height: '400px', 
+          position: 'relative',
+          backgroundColor: 'white',
+          boxShadow: '2px 7px 9px rgba(0, 0, 0, 0.4)',
+          cursor: 'pointer'
+        }}
         onClick={handleClick}
       >
-        <img 
-          src={imgUrl}
-          alt={name}
-          width="100%"
-          height="300px"
-        />
-        <p style={{position: 'absolute', top: '0', bottom: '0', left: '0', right: '0'}}>{`SHOP ${name.toUpperCase()}`}</p>
-        
+        <p className="cat-text">{name.toUpperCase()}</p>
+        <div
+          className="cat-img"
+        >
+          <img 
+            src={imgUrl}
+            alt={name}
+            width="100%"
+            height="95%"
+          />
+        </div>
         </div>
     </li>
 
