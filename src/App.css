@@ -38,18 +38,31 @@
   }
 }
 
+/* NAV COMP STYLING */
+.upper-nav-container {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-top: .75rem
+}
+
+.dummy-nav {
+  visibility: hidden;
+}
 .nav-bar div {
   padding: 10px;
   margin: 0 10px;
 }
+.upper-nav-links{
+  font-size: 16px;
+}
  
+.upper-nav-links:nth-of-type(1) {
+  margin: 0 3rem;
+}
 .nav-links {
   text-decoration: none;
   color: #000;
-  font-weight: bold;;
-
- 
-
 }
 
 .nav-links:hover {
@@ -85,7 +98,8 @@
 }
 
 .logo {
-  justify-self: center;
+
+  justify-self: flex-end
 }
 
 .cart-btn {
