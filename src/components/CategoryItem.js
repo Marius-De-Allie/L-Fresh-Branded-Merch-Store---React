@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-const CategoryItem = ({ catName }) => {
+const CategoryItem = ({ imgUrl, catName }) => {
   const history = useHistory();
 
   const handleClick = () => {
@@ -25,7 +25,7 @@ const CategoryItem = ({ catName }) => {
           className="cat-img"
         >
           <img 
-            src=""
+            src={imgUrl}
             alt={catName}
             width="100%"
             height="95%"
