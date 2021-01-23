@@ -47,13 +47,13 @@ const Nav = () => (
         <NavLink className="nav-links" to="/">Home</NavLink>
       </div>
       <div>
-        <NavLink className="nav-links" to="/shop/Hoodies">Hoodies</NavLink>
+        <NavLink className="nav-links" to="/shop/hoodies">Hoodies</NavLink>
       </div>
       <div>
-        <NavLink className="nav-links" to="/shop/Shirts">Shirts</NavLink>
+        <NavLink className="nav-links" to="/shop/shirts">Shirts</NavLink>
       </div>
       <div>
-        <NavLink className="nav-links" to="/shop/Headwear">HeadWear</NavLink>
+        <NavLink className="nav-links" to="/shop/headwear">HeadWear</NavLink>
       </div>
      
     </nav>

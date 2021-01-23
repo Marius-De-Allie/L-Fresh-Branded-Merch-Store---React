@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-const CategoryItem = ({ imgUrl, name }) => {
+const CategoryItem = ({ catName }) => {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push(`/shop/${name}`);
+    history.push(`/shop/${catName}`);
     console.log('redirect');
   };
   
   
   
-  console.log(imgUrl);
   return (
     <li 
       className="category-card"
@@ -21,13 +20,13 @@ const CategoryItem = ({ imgUrl, name }) => {
         className="cat-container"
         onClick={handleClick}
       >
-        <p className="cat-text">{name.toUpperCase()}</p>
+        <p className="cat-text">{catName.toUpperCase()}</p>
         <div
           className="cat-img"
         >
           <img 
-            src={imgUrl}
-            alt={name}
+            src=""
+            alt={catName}
             width="100%"
             height="95%"
           />

@@ -108,28 +108,28 @@ export const products = [
     price: 25,
     size: ['small', 'medium', 'large', 'XL', 'XXL'],
     imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-    catid: 'hoodies'
+    catId: 'hoodies'
   },
   {
     name: 'two',
     price: 35,
     size: ['small', 'medium', 'large', 'XL', 'XXL'],
     imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-    catid: 'hoodies'
+    catId: 'hoodies'
   },
   {
     name: 'three',
     price: 30,
     size: ['small', 'medium', 'large', 'XL', 'XXL'],
     imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-    catid: 'hoodies'
+    catId: 'hoodies'
   },
   {
     name: 'four',
     price: 40,
     size: ['small', 'medium', 'large', 'XL', 'XXL'],
     imgUrl: 'https://images.pexels.com/photos/1661471/pexels-photo-1661471.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-    catid: 'hoodies'
+    catId: 'hoodies'
   },
   {
     name: 'five',
