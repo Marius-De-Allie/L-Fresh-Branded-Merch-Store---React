@@ -12,10 +12,12 @@ import { useDispatch } from 'react-redux';
 
 function App() {
   const dispatch = useDispatch();
+ 
   useEffect(() => {
+    // Dispatch fetch products thunk action creator to get all products from db.
     dispatch(fetchProducts());
+  }, [dispatch]);
 
-  })
   return (
     <div className="App">
       <Nav />
