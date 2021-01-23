@@ -17,7 +17,8 @@ const CategoryItem = ({ imgUrl, name }) => {
       className="category-card"
       style={{listStyle: "none", display: "block", width: '100%', margin: '0 .25rem', padding: '0 1rem'}}
     >
-      <div 
+      <div
+        className="cat-container"
         style={{
           width: "100%", 
           height: '400px', 
