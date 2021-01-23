@@ -19,14 +19,6 @@ const CategoryItem = ({ imgUrl, name }) => {
     >
       <div
         className="cat-container"
-        style={{
-          width: "100%", 
-          height: '400px', 
-          position: 'relative',
-          backgroundColor: 'white',
-          boxShadow: '2px 7px 9px rgba(0, 0, 0, 0.4)',
-          cursor: 'pointer'
-        }}
         onClick={handleClick}
       >
         <p className="cat-text">{name.toUpperCase()}</p>
