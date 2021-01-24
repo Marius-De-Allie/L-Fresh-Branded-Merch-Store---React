@@ -3,6 +3,7 @@ import ItemSize from './ItemSize';
 
 /* use reducer logic */
 const SET_SIZE = 'SET_SIZE';
+const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
 
 // Initial cartItem state.
 const initialState = {
@@ -10,7 +11,7 @@ const initialState = {
   itemName: null,
   size: null,
   price: null,
-  quantity: null
+  quantity: 1
 };
 // cartItem Reducer.
 const cartItemReducer = (state, action) => {
@@ -33,6 +34,13 @@ const Item = ( { item }) => {
     dispatch({
       type: SET_SIZE,
       size: selectedSize
+    });
+  };
+
+  const selectQuantityHandler = (direction) => {
+    dispatch({
+      type: UPDATE_QUANTITY,
+      direction
     });
   };
 
