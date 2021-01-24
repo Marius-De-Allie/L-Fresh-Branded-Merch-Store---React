@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import ItemSize from './ItemSize';
 
+/* use reducer logic */
+
+// Initial cartItem state.
+const initialState = {
+  id: null,
+  itemName: null,
+  size: null,
+  price: null,
+  quantity: null
+};
+// cartItem Reducer.
+const cartItemReducer = (state, action) => {
+  switch(action.type) {
+   
+    default:
+      return state;
+  }
+};
+
 const Item = ( { item }) => {
+  const [cartItem, dispatch] = useReducer(cartItemReducer, initialState);
 
   return (
     <div className="item-container">
@@ -22,7 +42,7 @@ const Item = ( { item }) => {
           <div className="size-container">
             <p style={{marginBottom: 3}}>size</p>
             <div className="sizes">
-              {item.size.map(size => <ItemSize key={size} size={size} />)}
+              {item.size.map(size => <ItemSize key={size} size={size} onSelect={() => {}} />)}
             </div>
 
             

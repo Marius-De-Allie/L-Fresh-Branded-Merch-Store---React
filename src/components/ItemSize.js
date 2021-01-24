@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ItemSize = ({ size }) => {
+const ItemSize = ({ size, onSelect }) => {
 
   // Function that renders text equivalent of size array element.
   const renderSize = () => {
@@ -16,7 +16,7 @@ const ItemSize = ({ size }) => {
     }
   };
 
-  return <div className="size-item">
+  return <div className="size-item" onClick={() => onSelect(size)}>
     <p className="size-txt">{renderSize()}</p>
   </div>
 };
