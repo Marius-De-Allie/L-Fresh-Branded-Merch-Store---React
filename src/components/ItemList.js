@@ -23,10 +23,10 @@ const ItemList = ({ match }) => {
   });
 
 
-  if(transformedProducts.length > 0)  console.log(transformedProducts);
+  // if(transformedProducts.length > 0)  console.log(transformedProducts);
 
   return (
-    <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly'}}>
+    <div className="items-container">
       {transformedProducts.map(item => <Item key={item.ItemName} item={item} />)}
     </div>
   );
