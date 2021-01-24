@@ -20,7 +20,7 @@ const Item = ( { item }) => {
         </div>
         <div className="choice-container">
           <div className="size-container">
-            <p>size</p>
+            <p style={{marginBottom: 3}}>size</p>
             <div className="sizes">
               {item.size.map(size => <ItemSize key={size} size={size} />)}
             </div>
@@ -28,8 +28,12 @@ const Item = ( { item }) => {
             
           </div>
           <div className="quantity-container">
-            <p>quantity</p>
-            <p>- 1 +</p>
+            <p style={{marginBottom: 3}}>quantity</p>
+            <div className="quantity-buttons">
+              <div style={{fontSize: '18px'}}>-</div>
+              <p>1</p>
+              <div style={{fontSize: '18px'}}>+</div>
+            </div>
           </div>
         </div>
     

@@ -159,7 +159,7 @@
   width: 250px;
   height: 410px;
   margin: 0 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 4rem;
 }
 .item-image-container {
   width: 100%;
@@ -278,6 +278,19 @@
   background-color: salmon;
   color: white;
   border: none;
+}
+
+.quantity-container {
+  /* border: 1px solid black; */
+}
+
+.quantity-buttons {
+  /* width: 80px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 7px;
+  border: 1px solid black;
 }
 
 /* .quantity-container {
