@@ -16,7 +16,9 @@ const ItemSize = ({ size }) => {
     }
   };
 
-  return <p style={{textTransform: 'uppercase'}}>{renderSize()}</p>
+  return <div className="size-item">
+    <p className="size-txt">{renderSize()}</p>
+  </div>
 };
 
 export default ItemSize;

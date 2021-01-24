@@ -255,6 +255,31 @@
   display: flex;
 }
 
+.size-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer; 
+  border: 1px solid black; 
+  height: 25px;
+  width: 25px; 
+  border-radius: 50%; 
+  align-items: center; 
+  justify-content: center; 
+  margin-right: 2px;
+}
+
+.size-txt {
+  font-size: 14px; 
+  font-weight: 200; 
+  text-transform: lowercase;
+}
+
+.size-item:hover {
+  background-color: salmon;
+  color: white;
+  border: none;
+}
+
 /* .quantity-container {
   display: flex;
   flex-direction: column;
