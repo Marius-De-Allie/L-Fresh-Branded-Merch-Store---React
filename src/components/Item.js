@@ -73,9 +73,9 @@ const Item = ( { item }) => {
           <div className="quantity-container">
             <p style={{marginBottom: 3}}>quantity</p>
             <div className="quantity-buttons">
-              <div style={{fontSize: '18px'}}>-</div>
-              <p>1</p>
-              <div style={{fontSize: '18px'}}>+</div>
+              <div style={{fontSize: '18px', cursor: 'pointer'}} onClick={() => selectQuantityHandler('minus')}>-</div>
+              <p>{cartItem.quantity}</p>
+              <div style={{fontSize: '18px', cursor: 'pointer'}} onClick={() => selectQuantityHandler('plus')}>+</div>
             </div>
           </div>
         </div>
