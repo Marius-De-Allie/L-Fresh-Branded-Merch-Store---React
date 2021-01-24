@@ -21,6 +21,13 @@ const cartItemReducer = (state, action) => {
         ...state,
         size: action.size
       };
+    case UPDATE_QUANTITY:
+      let updatedQuantity = action.direction === 'minus' ? state.quantity - 1 : state.quantity + 1;
+     
+      return {
+        ...state,
+        quantity: updatedQuantity
+      };
     default:
       return state;
   }
@@ -73,9 +80,18 @@ const Item = ( { item }) => {
           <div className="quantity-container">
             <p style={{marginBottom: 3}}>quantity</p>
             <div className="quantity-buttons">
-              <div style={{fontSize: '18px', cursor: 'pointer'}} onClick={() => selectQuantityHandler('minus')}>-</div>
+              <div style={{fontSize: '18px', cursor: 'pointer'}} onClick={() => {
+                if(cartItem.quantity > 1) {
+                  selectQuantityHandler('minus')
+                }
+                }}>-</div>
               <p>{cartItem.quantity}</p>
-              <div style={{fontSize: '18px', cursor: 'pointer'}} onClick={() => selectQuantityHandler('plus')}>+</div>
+              <div style={{fontSize: '18px', cursor: 'pointer'}} onClick={() => {
+                if(cartItem.quantity < 10) {
+                  selectQuantityHandler('plus')
+                  
+                }
+                }}>+</div>
             </div>
           </div>
         </div>
