@@ -80,13 +80,13 @@ const Item = ( { item }) => {
           <div className="quantity-container">
             <p style={{marginBottom: 3}}>quantity</p>
             <div className="quantity-buttons">
-              <div style={{fontSize: '18px', cursor: 'pointer'}} onClick={() => {
+              <div className="quantity-btn" onClick={() => {
                 if(cartItem.quantity > 1) {
                   selectQuantityHandler('minus')
                 }
                 }}>-</div>
               <p>{cartItem.quantity}</p>
-              <div style={{fontSize: '18px', cursor: 'pointer'}} onClick={() => {
+              <div className="quantity-btn" onClick={() => {
                 if(cartItem.quantity < 10) {
                   selectQuantityHandler('plus')
                   

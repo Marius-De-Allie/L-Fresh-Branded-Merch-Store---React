@@ -293,6 +293,15 @@
   border: 1px solid black;
 }
 
+.quantity-btn {
+  font-size: 18px; 
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+  color: salmon;
+}
+
 /* .quantity-container {
   display: flex;
   flex-direction: column;
