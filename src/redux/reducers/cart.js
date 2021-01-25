@@ -1,4 +1,5 @@
 import { ADD_TO_CART } from '../actions/cart';
+import CartItem from '../../utils/model/cartItem';
 
 const initialState = {
   items: [],
@@ -13,11 +14,11 @@ const cartReducer = (state = initialState, action) => {
       const cartItemIdx = state.items.findIndex(item => item.name === action.cartData.name);
 
       if(cartItemIdx === -1) {
-        newCartItem = action.cartData;
+        newCartItem = new CartItem(new Date().toISOString, action.cartData.name, action.cartData.price, action.cartData.quantity, parseInt(action.cartData.totalPrice));
         newItems = [...state.items, newCartItem];
       } else {
         matchingItem = state.items[cartItemIdx];
-        newCartItem = {...matchingItem, quantity: matchingItem.quantity + action.cartData.quantity};
+        newCartItem = new CartItem(matchingItem.id, matchingItem.name, matchingItem.price, matchingItem.quantity + action.cartData.quantity, matchingItem.totalPrice + action.cartData.totalPrice);
         newItems = state.items.map((item, idx) => idx === cartItemIdx ? newCartItem : item);
       }
       return {
