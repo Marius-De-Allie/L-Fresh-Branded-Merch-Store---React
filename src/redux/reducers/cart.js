@@ -10,7 +10,7 @@ const cartReducer = (state = initialState, action) => {
     case ADD_TO_CART:
       let newCartItem, matchingItem, newItems;
       // get array index of newly added cart item.
-      const cartItemIdx = state.items.findIndex(item => item.id === action.cartData.id);
+      const cartItemIdx = state.items.findIndex(item => item.name === action.cartData.name);
 
       if(cartItemIdx === -1) {
         newCartItem = action.cartData;
