@@ -11,14 +11,14 @@ const cartReducer = (state = initialState, action) => {
     case ADD_TO_CART:
       let newCartItem, matchingItem, newItems;
       // get array index of newly added cart item.
-      const cartItemIdx = state.items.findIndex(item => item.name === action.cartData.name);
+      const cartItemIdx = state.items.findIndex(item => item.id === action.cartData.name+action.cartData.size.toString());
 
       if(cartItemIdx === -1) {
-        newCartItem = new CartItem(new Date().toISOString, action.cartData.name, action.cartData.price, action.cartData.quantity, parseInt(action.cartData.totalPrice));
+        newCartItem = new CartItem(action.cartData.name+action.cartData.size.toString(), action.cartData.name, action.cartData.size, action.cartData.price, action.cartData.quantity, parseInt(action.cartData.totalPrice));
         newItems = [...state.items, newCartItem];
       } else {
         matchingItem = state.items[cartItemIdx];
-        newCartItem = new CartItem(matchingItem.id, matchingItem.name, matchingItem.price, matchingItem.quantity + action.cartData.quantity, matchingItem.totalPrice + action.cartData.totalPrice);
+        newCartItem = new CartItem(matchingItem.id, matchingItem.name, matchingItem.size, matchingItem.price, matchingItem.quantity + action.cartData.quantity, matchingItem.totalPrice + action.cartData.totalPrice);
         newItems = state.items.map((item, idx) => idx === cartItemIdx ? newCartItem : item);
       }
       return {

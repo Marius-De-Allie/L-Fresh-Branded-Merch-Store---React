@@ -1,9 +1,10 @@
 const ADD_TO_CART = 'ADD_TO_CART';
 
-const addToCart = (name, price, quantity, totalPrice) => ({
+const addToCart = (name, size, price, quantity, totalPrice) => ({
   type: ADD_TO_CART,
   cartData: {
-    name, 
+    name,
+    size, 
     price, 
     quantity, 
     totalPrice
