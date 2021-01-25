@@ -1,5 +1,7 @@
 import React, { useReducer } from 'react';
+import { useDispatch } from 'react-redux';
 import ItemSize from './ItemSize';
+import { addToCart } from '../redux/actions/cart';
 
 /* use reducer logic */
 const SET_SIZE = 'SET_SIZE';
@@ -7,7 +9,6 @@ const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
 
 // Initial cartItem state.
 const initialState = {
-  id: null,
   itemName: null,
   size: null,
   price: null,
@@ -34,6 +35,7 @@ const cartItemReducer = (state, action) => {
 };
 
 const Item = ( { item }) => {
+  const reduxDispatch = useDispatch();
   const [cartItem, dispatch] = useReducer(cartItemReducer, initialState);
 
   const selectSizeHandler = (selectedSize) => {
@@ -49,6 +51,11 @@ const Item = ( { item }) => {
       type: UPDATE_QUANTITY,
       direction
     });
+  };
+
+  const addToCartHandler = () => {
+    // dispatch addToCart action, passing int cart item data.
+    reduxDispatch(addToCart(cartItem.itemName, cartItem.size, cartItem.price, cartItem.quantity, cartItem.price * cartItem.quantity));
   };
 
   console.log(cartItem);
