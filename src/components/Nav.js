@@ -21,11 +21,12 @@ const Nav = () => (
         </NavLink>
       </div>
       <h1 className="logo">LOGO</h1>
-      <div style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end'}}>
         <NavLink className="upper-nav-links" to="/signin"><RiUser3Line color="salmon" size={18} /></NavLink>
         <NavLink className="upper-nav-links" to="/">
-          <RiShoppingCart2Line color="salmon" size={18} /> 
+          <RiShoppingCart2Line color="salmon" size={18} />
         </NavLink>
+        <sub style={{textDecoration:'', alignSelf: 'flex-end', color: 'salmon'}}>5</sub>
       </div>
     </div>
     <nav className="nav-bar" 
