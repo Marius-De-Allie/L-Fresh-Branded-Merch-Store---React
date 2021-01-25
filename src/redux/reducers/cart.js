@@ -1,7 +1,7 @@
 
 const initialState = {
   items: [],
-  total: 0
+  sum: null
 };
 
 const cartReducer = (state = initialState, action) => {
