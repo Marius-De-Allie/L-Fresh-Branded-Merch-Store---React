@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ItemSize = ({ size, onSelect }) => {
+const ItemSize = ({ size, onSelect, cartItemSize }) => {
 
   // Function that renders text equivalent of size array element.
   const renderSize = () => {
@@ -16,7 +16,7 @@ const ItemSize = ({ size, onSelect }) => {
     }
   };
 
-  return <div className="size-item" onClick={() => onSelect(size)}>
+  return <div className={`size-item ${size === cartItemSize ? 'selected' : ''}`} onClick={() => onSelect(size)}>
     <p className="size-txt">{renderSize()}</p>
   </div>
 };
