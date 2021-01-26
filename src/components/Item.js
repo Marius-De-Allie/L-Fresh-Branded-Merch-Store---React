@@ -1,11 +1,12 @@
 import React, { useReducer } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ItemSize from './ItemSize';
 import { addToCart } from '../redux/actions/cart';
 
 /* use reducer logic */
 const SET_SIZE = 'SET_SIZE';
 const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
+const ADD_TO_CART = 'ADD_TO_CART';
 
 // Initial cartItem state.
 const initialState = {
@@ -29,12 +30,19 @@ const cartItemReducer = (state, action) => {
         ...state,
         quantity: updatedQuantity
       };
+    case ADD_TO_CART:
+      return {
+        ...state,
+        itemName: action.name,
+        price: action.price
+      };
     default:
       return state;
   }
 };
 
 const Item = ( { item }) => {
+  const cart = useSelector(state => state.cart);
   const reduxDispatch = useDispatch();
   const [cartItem, dispatch] = useReducer(cartItemReducer, initialState);
 
@@ -54,16 +62,22 @@ const Item = ( { item }) => {
   };
 
   const addToCartHandler = () => {
-    // dispatch addToCart action, passing int cart item data.
+
+    // 1. dispatch use Reducer ADD_TO_CART action to set local component state itemName and price.
+    dispatch({type: ADD_TO_CART, name: item.name, price: item.price});
+    // check whether item size was selected before adding to cart.
+
+    // 3. dispatch addToCart action, passing in cart item data.
     reduxDispatch(addToCart(cartItem.itemName, cartItem.size, cartItem.price, cartItem.quantity, cartItem.price * cartItem.quantity));
   };
 
-  console.log(cartItem);
+  // console.log(cartItem);
+  console.log('MY CART', cart);
 
   return (
     <div className="item-container">
       <div className="item-image-container">
-        <img src={item.imgUrl} alt={item.itemName} className="image"/>
+        <img src={item.imgUrl} alt={item.name} className="image"/>
         <div 
           className="plus-cart" 
          >
