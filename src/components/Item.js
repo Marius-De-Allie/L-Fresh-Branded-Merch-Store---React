@@ -67,7 +67,11 @@ const Item = ( { item }) => {
         <div 
           className="plus-cart" 
          >
-          <p className="cart-btn-txt">Add to Cart</p>
+          <p className="cart-btn-txt"
+            onClick={addToCartHandler}
+          >
+            Add to Cart
+          </p>
         </div>
       </div>
       <div className="item-details-container">
