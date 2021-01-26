@@ -3,7 +3,8 @@ import CartItem from '../../utils/model/cartItem';
 
 const initialState = {
   items: [],
-  sum: null
+  sum: null,
+  totalItems: null
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -23,8 +24,14 @@ const cartReducer = (state = initialState, action) => {
       }
       return {
         ...state,
-        items: newItems
-      }
+        items: newItems,
+        sum: state.items.reduce((sum, item) => {
+          return sum + item.totalPrice;
+        }, 0),
+        totalItems: state.items.reduce((total, item) => {
+          return total + item.quantity;
+        }, 0)
+      };
     default:
       return state;
   }
