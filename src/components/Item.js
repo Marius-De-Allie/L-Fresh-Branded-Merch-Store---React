@@ -62,13 +62,14 @@ const Item = ( { item }) => {
   };
 
   const addToCartHandler = () => {
-
     // 1. dispatch use Reducer ADD_TO_CART action to set local component state itemName and price.
     dispatch({type: ADD_TO_CART, name: item.name, price: item.price});
-    // check whether item size was selected before adding to cart.
-
-    // 3. dispatch addToCart action, passing in cart item data.
-    reduxDispatch(addToCart(cartItem.itemName, cartItem.size, cartItem.price, cartItem.quantity, cartItem.price * cartItem.quantity));
+    // 2. check whether item size was selected before adding to cart.
+    if(cartItem.size && cartItem.itemName && cartItem.price && cartItem.quantity) {
+    // 4. if product size selected then dispatch ADD_TO_CART redux action.
+      // Dispatch addToCart action, passing in cart item data.
+      reduxDispatch(addToCart(cartItem.itemName, cartItem.size, cartItem.price, cartItem.quantity, cartItem.price * cartItem.quantity));
+    }
   };
 
   // console.log(cartItem);
