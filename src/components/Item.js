@@ -6,7 +6,6 @@ import { addToCart } from '../redux/actions/cart';
 /* use reducer logic */
 const SET_SIZE = 'SET_SIZE';
 const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
-const ADD_TO_CART = 'ADD_TO_CART';
 
 // Initial cartItem state.
 const initialState = {
@@ -28,12 +27,6 @@ const cartItemReducer = (state, action) => {
         ...state,
         quantity: updatedQuantity
       };
-    // case ADD_TO_CART:
-    //   return {
-    //     ...state,
-    //     itemName: action.name,
-    //     price: action.price
-    //   };
     default:
       return state;
   }
@@ -94,7 +87,7 @@ const Item = ( { item }) => {
           <div className="size-container">
             <p style={{marginBottom: 3}}>size</p>
             <div className="sizes">
-              {item.size.map(size => <ItemSize key={size} size={size} onSelect={selectSizeHandler} />)}
+              {item.size.map(size => <ItemSize key={size} size={size} onSelect={selectSizeHandler} cartItemSize={cartItem.size} />)}
             </div>
 
             
