@@ -6,6 +6,7 @@ import { addToCart } from '../redux/actions/cart';
 /* use reducer logic */
 const SET_SIZE = 'SET_SIZE';
 const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
+const RESET = 'RESET';
 
 // Initial cartItem state.
 const initialState = {
@@ -27,6 +28,8 @@ const cartItemReducer = (state, action) => {
         ...state,
         quantity: updatedQuantity
       };
+    case RESET:
+      return initialState;
     default:
       return state;
   }
@@ -58,6 +61,8 @@ const Item = ( { item }) => {
     // 2. if product size selected then dispatch ADD_TO_CART redux action.
       // Dispatch addToCart action, passing in cart item data.
       reduxDispatch(addToCart(item.name, cartItem.size, item.price, cartItem.quantity, item.price * cartItem.quantity));
+      // dispatch useReducer RESET action.
+      dispatch({type: RESET});
     }
   };
 
@@ -70,7 +75,6 @@ const Item = ( { item }) => {
         <img src={item.imgUrl} alt={item.name} className="image"/>
         <div 
           className="plus-cart" 
-          style={{border: '1px solid red'}}
           onClick={addToCartHandler}
          >
           <p className="cart-btn-txt">
