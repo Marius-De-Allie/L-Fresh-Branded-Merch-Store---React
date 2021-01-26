@@ -10,9 +10,7 @@ const ADD_TO_CART = 'ADD_TO_CART';
 
 // Initial cartItem state.
 const initialState = {
-  itemName: null,
   size: null,
-  price: null,
   quantity: 1
 };
 // cartItem Reducer.
@@ -30,12 +28,12 @@ const cartItemReducer = (state, action) => {
         ...state,
         quantity: updatedQuantity
       };
-    case ADD_TO_CART:
-      return {
-        ...state,
-        itemName: action.name,
-        price: action.price
-      };
+    // case ADD_TO_CART:
+    //   return {
+    //     ...state,
+    //     itemName: action.name,
+    //     price: action.price
+    //   };
     default:
       return state;
   }
@@ -62,13 +60,11 @@ const Item = ( { item }) => {
   };
 
   const addToCartHandler = () => {
-    // 1. dispatch use Reducer ADD_TO_CART action to set local component state itemName and price.
-    dispatch({type: ADD_TO_CART, name: item.name, price: item.price});
-    // 2. check whether item size was selected before adding to cart.
-    if(cartItem.size && cartItem.itemName && cartItem.price && cartItem.quantity) {
-    // 4. if product size selected then dispatch ADD_TO_CART redux action.
+    // 1. check whether item size was selected before adding to cart.
+    if(cartItem.size) {
+    // 2. if product size selected then dispatch ADD_TO_CART redux action.
       // Dispatch addToCart action, passing in cart item data.
-      reduxDispatch(addToCart(cartItem.itemName, cartItem.size, cartItem.price, cartItem.quantity, cartItem.price * cartItem.quantity));
+      reduxDispatch(addToCart(item.name, cartItem.size, item.price, cartItem.quantity, item.price * cartItem.quantity));
     }
   };
 
@@ -81,10 +77,10 @@ const Item = ( { item }) => {
         <img src={item.imgUrl} alt={item.name} className="image"/>
         <div 
           className="plus-cart" 
+          style={{border: '1px solid red'}}
+          onClick={addToCartHandler}
          >
-          <p className="cart-btn-txt"
-            onClick={addToCartHandler}
-          >
+          <p className="cart-btn-txt">
             Add to Cart
           </p>
         </div>
