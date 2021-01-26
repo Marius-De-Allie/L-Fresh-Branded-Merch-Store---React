@@ -280,6 +280,12 @@
   border: none;
 }
 
+.size-item.selected {
+  background-color: salmon;
+  color: white;
+  border: none;
+}
+
 .quantity-container {
   /* border: 1px solid black; */
 }
