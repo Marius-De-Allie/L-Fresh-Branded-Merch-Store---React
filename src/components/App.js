@@ -22,8 +22,8 @@ function App() {
   return (
     <div className="App">
       <Nav />
+      <Route exact path="/" component={HomePage} />
       <Switch>
-        <Route exact path="/" component={HomePage} />
         <Route path="/shop/:catId" component={ItemList} />
         <Route path="/signin" component={SignInPage} />
         <Route path="/cart" component={Cart} />
