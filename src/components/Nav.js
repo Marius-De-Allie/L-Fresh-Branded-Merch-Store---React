@@ -27,7 +27,7 @@ const Nav = () => {
         <h1 className="logo">LOGO</h1>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end'}}>
           <NavLink className="upper-nav-links" to="/signin"><RiUser3Line color="salmon" size={18} /></NavLink>
-          <NavLink className="upper-nav-links" to="/">
+          <NavLink className="upper-nav-links" to="/cart">
             <RiShoppingCart2Line color="salmon" size={18} />
           </NavLink>
           {cartItems > 0 && <sub style={{textDecoration:'', alignSelf: 'flex-end', color: 'salmon'}}>{cartItems}</sub>}
