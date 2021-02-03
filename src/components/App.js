@@ -5,6 +5,7 @@ import SignInPage from './SignInPage';
 import ItemList from './ItemList';
 import Nav from './Nav';
 import Cart from './Cart';
+import Checkout from '../pages/Checkout';
 import { fetchProducts } from '../redux/actions/products';
 // Styling
 import '../App.css';
@@ -27,6 +28,7 @@ function App() {
         <Route path="/shop/:catId" component={ItemList} />
         <Route path="/signin" component={SignInPage} />
         <Route path="/cart" component={Cart} />
+        <Route path="/checkout" component={Checkout} />
       </Switch>
     </div>
   );
