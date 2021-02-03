@@ -1,10 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { removeItem } from '../redux/actions/cart';
 
 const Cart = () => {
   const cart = useSelector(({ cart }) => cart);
+  const dispatch = useDispatch();
   const history = useHistory();
+
+  const removeItemHandler = (id) => {
+    // dispatch REMOVE_ITEM action.
+    dispatch(removeItem(id));
+  }
 
   // Check out button click handler fn.
   const checkoutHandler = () => {
@@ -34,7 +41,11 @@ const Cart = () => {
               <td>{cartItem.name}</td>
               <td>{cartItem.quantity}</td>
               <td>${cartItem.totalPrice.toFixed(2)}</td>
-              <td>X</td>
+              <td>
+                <div style={{cursor: 'pointer', border: '1px solid red'}} onClick={() => {
+                  console.log('REMOVE')
+                  removeItemHandler(cartItem.id)}}>X</div>
+              </td>
             </tr>
           ))}
         </tbody>

@@ -37,7 +37,7 @@ const cartReducer = (state = initialState, action) => {
       return {
         ...state,
         items: updatedItems,
-        sum: updatedItems.reducer((sum, item) => {
+        sum: updatedItems.reduce((sum, item) => {
           return sum + item.totalPrice;
         }, 0),
         totalItems: updatedItems.reduce((total, item) => {
